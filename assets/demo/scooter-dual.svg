@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" role="img" aria-labelledby="title">
+  <title id="title">Illustrative Atlas Dual 2 electric scooter</title>
+  <rect width="520" height="260" rx="32" fill="#e5e7ff"/>
+  <circle cx="112" cy="205" r="39" fill="#171713"/><circle cx="112" cy="205" r="19" fill="#ff6a3d"/>
+  <circle cx="411" cy="205" r="39" fill="#171713"/><circle cx="411" cy="205" r="19" fill="#ff6a3d"/>
+  <path d="M110 171h199l67-119" fill="none" stroke="#ff6a3d" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m303 174 59-140h73" fill="none" stroke="#171713" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M62 166h250l-17 31H91c-15 0-25-11-29-31Z" fill="#171713"/>
+  <path d="M358 37h90" stroke="#171713" stroke-width="14" stroke-linecap="round"/>
+  <path d="M370 62v113" stroke="#ff6a3d" stroke-width="9" stroke-linecap="round"/>
+  <path d="M96 154v-23m32 23v-23" stroke="#171713" stroke-width="9" stroke-linecap="round"/>
+</svg>

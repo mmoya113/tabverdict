@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f0e8">
+    <title>Privacy · TabVerdict</title>
+    <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="docs.css">
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>TabVerdict</span></a>
+      <nav aria-label="Primary navigation"><a href="index.html#why">Why</a><a href="index.html#how">How it works</a><a href="privacy.html" aria-current="page">Privacy</a></nav>
+      <a class="nav-cta" href="dashboard.html?demo=1">Try the live demo <span aria-hidden="true">↗</span></a>
+    </header>
+    <main class="doc-page">
+      <header class="doc-hero">
+        <p class="eyebrow"><span>PLAIN ENGLISH</span> EFFECTIVE 6 AUGUST 2026</p>
+        <h1>Your shortlist is<br><em>not a business model.</em></h1>
+        <p>TabVerdict is designed so product research can stay on your device. This page explains the boundary without hiding it inside legal fog.</p>
+      </header>
+      <div class="doc-grid">
+        <aside>
+          <strong>On this page</strong>
+          <a href="#short">Short version</a><a href="#data">Local data</a><a href="#network">Network behavior</a><a href="#exports">Exports</a><a href="#delete">Delete data</a><a href="#permissions">Permissions</a>
+        </aside>
+        <article class="doc-copy">
+          <section id="short"><span class="doc-number">01</span><h2>The short version</h2><ul><li>No account.</li><li>No data-collection server.</li><li>No analytics, ads or affiliate tracking.</li><li>The page is read only after your explicit capture action.</li><li>The board is stored on this device.</li></ul></section>
+          <section id="data"><span class="doc-number">02</span><h2>Data processed locally</h2><p>A capture may read the chosen page's title, URL, image reference, price, currency, brand, availability, rating, review count, structured product data and specification tables. Costs, notes and custom criteria you enter join that normalized product in <code>chrome.storage.local</code>.</p></section>
+          <section id="network"><span class="doc-number">03</span><h2>Network behavior</h2><p>TabVerdict contains no API endpoint and does not upload your comparison. If a product has a remote image, your browser may request it directly from the source site with a no-referrer policy. The static web demo also has no telemetry and keeps its board in localStorage.</p></section>
+          <section id="exports"><span class="doc-number">04</span><h2>Exports</h2><p>Markdown, CSV, JSON and AI prompts are generated inside your browser. Data leaves TabVerdict only when you choose to copy, download or share it.</p></section>
+          <section id="delete"><span class="doc-number">05</span><h2>Delete your data</h2><p>Use the reset button on the board and confirm the clear action. Removing the extension and its extension data also removes the stored board. TabVerdict uses local storage, not browser sync.</p></section>
+          <section id="permissions"><span class="doc-number">06</span><h2>Four permissions, four reasons</h2><div class="permission-list"><div><code>activeTab</code><p>Temporarily read the page you chose.</p></div><div><code>scripting</code><p>Run the packaged extractor on that page.</p></div><div><code>storage</code><p>Retain your board locally.</p></div><div><code>contextMenus</code><p>Offer an optional capture shortcut.</p></div></div><p>The manifest intentionally has no permanent <code>host_permissions</code> entry.</p></section>
+          <section><span class="doc-number">07</span><h2>Questions or vulnerabilities</h2><p>Open a public privacy question in <a href="https://github.com/mmoya113/tabverdict/issues">GitHub Issues</a>. Report a vulnerability privately through <a href="https://github.com/mmoya113/tabverdict/security/advisories/new">GitHub Security Advisories</a>.</p></section>
+        </article>
+      </div>
+    </main>
+    <footer><div class="brand footer-brand"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>TabVerdict</span></div><p>Four permissions. Zero hidden motives.</p><div><a href="README.md">Docs</a><a href="privacy.html">Privacy</a><a href="https://github.com/mmoya113/tabverdict">GitHub</a></div></footer>
+  </body>
+</html>
