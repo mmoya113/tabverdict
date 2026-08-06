@@ -1,0 +1,24 @@
+{
+  "name": "tabverdict",
+  "version": "0.1.0",
+  "description": "A privacy-first browser extension for evidence-backed product comparisons.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "validate": "node scripts/validate.mjs",
+    "check": "npm run validate && npm test",
+    "package": "node scripts/package.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "browser-extension",
+    "comparison",
+    "local-first",
+    "privacy",
+    "shopping"
+  ],
+  "license": "MIT"
+}

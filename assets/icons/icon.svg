@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">TabVerdict logo</title>
+  <rect x="7" y="7" width="114" height="114" rx="30" fill="#dfff55" stroke="#171713" stroke-width="8"/>
+  <path d="M33 87V64h15v23H33Zm24 0V35h15v52H57Zm24 0V50h15v37H81Z" fill="#171713"/>
+  <path d="M29 94h70" stroke="#171713" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="96" cy="31" r="18" fill="#1f58ff" stroke="#171713" stroke-width="5"/>
+  <path d="m87 31 6 6 11-13" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

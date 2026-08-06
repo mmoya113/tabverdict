@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TabVerdict</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <header class="popup-head">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>TabVerdict</span>
+      </div>
+      <span class="local-badge"><i aria-hidden="true"></i> Local</span>
+    </header>
+
+    <main>
+      <section id="capture-section" aria-live="polite">
+        <div id="loading" class="capture-card loading-card">
+          <div class="skeleton skeleton-image"></div>
+          <div class="skeleton-lines"><span></span><span></span><span></span></div>
+        </div>
+
+        <div id="capture-error" class="error-card" hidden>
+          <span class="error-icon" aria-hidden="true">!</span>
+          <h1>This page cannot be captured.</h1>
+          <p id="capture-error-message">Open a public product page, then try again.</p>
+          <button class="secondary-button" type="button" data-open-board>Add it manually →</button>
+        </div>
+
+        <article id="preview" class="capture-card" hidden>
+          <div id="preview-visual" class="preview-visual"></div>
+          <div class="preview-body">
+            <div class="preview-meta"><span id="preview-site"></span><span id="quality-badge" class="quality-badge"></span></div>
+            <h1 id="preview-title"></h1>
+            <div class="preview-price-row">
+              <div><small>Detected price</small><strong id="preview-price"></strong></div>
+              <span id="preview-rating" class="preview-rating"></span>
+            </div>
+            <button id="capture-button" class="capture-button" type="button">
+              <span>Add to comparison</span><b aria-hidden="true">+</b>
+            </button>
+            <p class="capture-note">Nothing leaves this browser. Review detected values before buying.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="shortlist" aria-labelledby="shortlist-title">
+        <div class="section-head"><h2 id="shortlist-title">Your shortlist</h2><span id="shortlist-count">0 / 8</span></div>
+        <div id="recent-products" class="recent-products"></div>
+      </section>
+    </main>
+
+    <footer>
+      <button class="board-button" type="button" data-open-board>Open decision board <span aria-hidden="true">↗</span></button>
+      <span>Alt + Shift + V</span>
+    </footer>
+
+    <script src="src/lib/core.js"></script>
+    <script src="src/lib/storage.js"></script>
+    <script src="src/popup.js"></script>
+  </body>
+</html>
