@@ -1,190 +1,105 @@
-<p align="center">
-  <img src="assets/readme/logo.svg" alt="TabVerdict SHOW/RIFT logo" width="780">
-</p>
+# SpecForge ✦
 
 <p align="center">
-  <strong>✨ Screenshots are not a story. Make people click.</strong>
+  <img src="https://img.shields.io/badge/SpecForge-API%20workspace-9b8cff?style=for-the-badge&labelColor=111217" alt="SpecForge">
+  <img src="https://img.shields.io/badge/local--first-no%20account-75e8bc?style=for-the-badge&labelColor=111217" alt="Local first">
+  <img src="https://img.shields.io/badge/zero%20dependencies-single%20file-ffb86b?style=for-the-badge&labelColor=111217" alt="Single file">
 </p>
 
-<p align="center">
-  <a href="#-why-showrift">Why</a> ·
-  <a href="#-features">Features</a> ·
-  <a href="#-exports">Exports</a> ·
-  <a href="#-quick-start">Quick Start</a> ·
-  <a href="#-privacy">Privacy</a>
-</p>
+<p align="center"><strong>Turn a raw API contract into documentation people actually want to use.</strong></p>
 
-<p align="center">
-  <img alt="Local-first" src="https://img.shields.io/badge/local--first-100%25-d6ff3f?style=for-the-badge&labelColor=111111">
-  <img alt="No backend" src="https://img.shields.io/badge/backend-none-f4f1e8?style=for-the-badge&labelColor=111111">
-  <img alt="Exports" src="https://img.shields.io/badge/exports-HTML%20%7C%20README%20%7C%20JSON-d6ff3f?style=for-the-badge&labelColor=111111">
-</p>
+SpecForge is a calm, visual API workspace for developers, automation builders and small teams. Drop in an OpenAPI JSON file and get a useful surface immediately: searchable routes, a focused endpoint inspector, copyable cURL recipes, a handoff checklist and a README export.
 
-![SHOW/RIFT premium product story studio](assets/readme/hero.svg)
+It replaces the “here is a giant JSON file, good luck” experience with a first successful request in under a minute.
 
----
+## Why this exists
 
-## 🚀 What Is SHOW/RIFT?
+Marc builds websites, automations and API-powered products. The painful part is rarely writing another endpoint; it is making the result understandable to someone else.
 
-**SHOW/RIFT** is a local-first product story studio for turning plain screenshots into a polished, clickable walkthrough.
+SpecForge is intentionally narrow:
 
-Instead of dropping random screenshots into a README and hoping people understand the project, you build a small visual story:
+- **Explore** routes without losing the context of the contract.
+- **Inspect** one endpoint with its parameters and environment.
+- **Copy** a ready-to-run cURL recipe.
+- **Handoff** a clean README instead of a wall of screenshots.
+- **Stay local** while you are shaping the contract.
 
-- add scenes,
-- place hotspots,
-- write short explanations,
-- present the flow,
-- export something people can actually open.
+## Features
 
-It is made for GitHub repos, MVPs, client demos, school projects, app launches and any idea that needs to look clear before people judge it.
-
----
-
-## 🧠 Why SHOW/RIFT?
-
-Most projects do not fail because the idea is impossible. They fail because the first impression is weak.
-
-A screenshot alone usually says: **"figure it out yourself."**
-
-SHOW/RIFT says: **"look here, click this, understand the product in 30 seconds."**
-
-| Normal README | SHOW/RIFT README |
+| Feature | What it does |
 | --- | --- |
-| Static screenshots | Interactive product story |
-| Long explanations | Short visual callouts |
-| Hard to understand | Guided flow |
-| Looks unfinished | Feels launch-ready |
-| Needs hosting | Works locally |
+| API explorer | Search paths, methods, names and tags in real time |
+| Endpoint inspector | See description, parameters, status and request recipe |
+| OpenAPI import | Parse OpenAPI 3 JSON paths directly in the browser |
+| Recipes | Give teammates a first happy-path request |
+| Handoff checklist | Catch missing base URL, auth, recipe and error docs |
+| README export | Download a starter markdown reference |
+| Local-first | No login, analytics or backend required |
 
----
+## Quick Start
 
-## ✨ Features
-
-### 🖼️ Screenshot Story Builder
-
-Create a sequence of scenes from screenshots, mockups or product states. Each scene becomes one step in the story.
-
-### 📍 Clickable Hotspots
-
-Drop pins directly on the screenshot. Each hotspot explains what matters and can move the viewer to the next or previous scene.
-
-### 🎬 Presentation Mode
-
-Switch from editing to a clean player view when you want to show the product without the editor panels.
-
-### 📦 Export Center
-
-Export the same project in multiple formats:
-
-- **HTML** for an offline interactive demo,
-- **README Markdown** for GitHub,
-- **JSON** for backup or future editing.
-
-### 🔒 Local-First by Design
-
-No account. No backend. No upload. Your screenshots and project data stay in your browser unless you decide to export them.
-
-### ⚡ Zero Setup Demo
-
-The app is self-contained in `index.html`, so you can open it directly in a browser and start testing.
-
----
-
-## 🎯 Built For
-
-- 🧑‍💻 developers who want their repo to look more serious,
-- 🚀 founders showing an MVP,
-- 🎨 designers explaining flows,
-- 📱 app builders sharing prototypes,
-- 🏫 students presenting projects,
-- 🧾 anyone tired of ugly README screenshots.
-
----
-
-## 📤 Exports
-
-| Export | What You Get | Best For |
-| --- | --- | --- |
-| **HTML** | A standalone clickable walkthrough | Sending demos, offline previews, repo demos |
-| **README** | A clean markdown launch block | GitHub presentation and documentation |
-| **JSON** | A portable project backup | Restoring or continuing later |
-
----
-
-## 🧪 Quick Start
-
-Open the app:
-
-```bash
+\`\`\`bash
+git clone https://github.com/mmoya113/tabverdict.git
+cd tabverdict
 open index.html
-```
+\`\`\`
 
-Or just double-click `index.html` from your file explorer.
+Or double-click \`index.html\`. It is a portable static app: no build step, no account and no API key required for the demo.
 
-Run the repository check:
+## Try it in 30 seconds
 
-```bash
-npm run check
-```
+1. Open the sample workspace.
+2. Click an endpoint in **API explorer**.
+3. Switch **Overview → Endpoints → Recipes**.
+4. Copy the cURL recipe.
+5. Use **Import OpenAPI** with your own JSON contract.
+6. Export the README when the handoff is ready.
 
-Expected output:
+## OpenAPI input
 
-```bash
-SHOW/RIFT check passed
-```
+The importer reads the most useful part of an OpenAPI JSON document: \`paths\`.
 
----
+\`\`\`json
+{
+  "openapi": "3.0.3",
+  "info": { "title": "Moya Studio API", "version": "1.4.0" },
+  "paths": {
+    "/v1/projects": {
+      "get": {
+        "summary": "List projects",
+        "tags": ["Projects"]
+      }
+    }
+  }
+}
+\`\`\`
 
-## 🛠️ How It Works
+No file is uploaded. The parser runs in your browser and keeps the imported surface in memory.
 
-1. **Import or use demo screenshots.**
-2. **Create scenes** in the order you want people to understand them.
-3. **Place hotspots** on the important parts of each screenshot.
-4. **Write tiny callouts** that explain the value fast.
-5. **Switch to presentation mode** and test the flow.
-6. **Export HTML, README or JSON** when it is ready.
+## Design principles
 
----
+- **First win before full reference.** A good tool shows a successful request before the entire schema.
+- **Proof over decoration.** Every panel exists to answer “what do I do next?”
+- **Local by default.** Early API work often contains private URLs and unfinished ideas.
+- **Polished, not noisy.** One primary action per surface and readable information density.
+- **Static-friendly.** The useful version should work from a GitHub checkout or a downloaded file.
 
-## 🔥 Why It Feels Different
+## Roadmap
 
-SHOW/RIFT is not a task app, finance tracker or generic AI dashboard. It solves a very specific problem:
+- OpenAPI YAML import without a server.
+- Request body examples generated from schema.
+- Shareable static docs export with syntax highlighting.
+- Optional real request runner with explicit CORS/auth warnings.
+- GitHub Actions check for broken examples.
 
-> Make a project look understandable, premium and launch-ready before someone closes the tab.
+## Privacy
 
-That matters because most people decide if they care about a repo in seconds.
+SpecForge has no login, analytics SDK or backend. The static demo does not transmit your contract anywhere. Do not paste production secrets into cURL examples; use environment variables such as \`$MOYA_API_KEY\`.
 
----
+## Contributing
 
-## 🔐 Privacy
+Ideas, bug reports and pull requests are welcome. Keep changes focused on making APIs easier to understand and safer to hand off.
 
-SHOW/RIFT stores your current project in `localStorage`.
+## License
 
-That means:
-
-- ✅ your screenshots stay on your device,
-- ✅ there is no analytics backend,
-- ✅ there is no login wall,
-- ✅ exports are created only when you click export,
-- ✅ you control what gets shared.
-
----
-
-## 🧩 Tech Notes
-
-- Single-file browser app.
-- No backend required.
-- Uses browser APIs for file import, local storage and downloads.
-- Works as a portable static project.
-- Includes a lightweight CI check through GitHub Actions.
-
----
-
-## 💚 Brand
-
-This repo lives under **TabVerdict**, rebuilt as the **SHOW/RIFT edition**: a sharper product-story tool focused on presentation, proof and launch quality.
-
-<p align="center">
-  <strong>SHOW/RIFT</strong><br>
-  <span>Build the story people should see before they judge the screenshot.</span>
-</p>
+MIT — use it, fork it, improve it.
