@@ -1,43 +1,14 @@
-name: Checks
-
+name: ci
 on:
+  pull_request:
   push:
     branches: [main]
-  pull_request:
-
-permissions:
-  contents: read
-
-concurrency:
-  group: checks-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
-  test-and-package:
+  check:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 22
-
-      - name: Run validation and tests
-        run: npm run check
-
-      - name: Package unpacked extension
-        run: |
-          npm run package
-          cd dist
-          zip -qr tabverdict.zip tabverdict
-
-      - name: Upload installable artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: tabverdict-${{ github.sha }}
-          path: dist/tabverdict.zip
-          if-no-files-found: error
-          retention-days: 14
+          node-version: 24
+      - run: npm run check

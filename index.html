@@ -1,150 +1,28 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="TabVerdict turns product tabs into a sourced, weighted and private comparison.">
-    <meta name="theme-color" content="#dfff55">
-    <meta property="og:title" content="TabVerdict — Compare with receipts, not vibes">
-    <meta property="og:description" content="A privacy-first browser extension for honest product comparisons.">
-    <meta property="og:image" content="assets/readme/social-preview.png">
-    <title>TabVerdict — Compare with receipts, not vibes</title>
-    <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="nav">
-      <a class="brand" href="#top" aria-label="TabVerdict home">
-        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-        <span>TabVerdict</span>
-      </a>
-      <nav aria-label="Primary navigation">
-        <a href="#why">Why</a>
-        <a href="#how">How it works</a>
-        <a href="#privacy">Privacy</a>
-      </nav>
-      <a class="nav-cta" href="dashboard.html?demo=1">Try the live demo <span aria-hidden="true">↗</span></a>
-    </header>
-
-    <main id="main">
-      <section id="top" class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow"><span>OPEN SOURCE</span> A DECISION TOOL THAT SHOWS ITS WORK</p>
-          <h1>Compare with<br><em>receipts,</em><br>not vibes.</h1>
-          <p class="lede">Turn scattered shopping tabs into one sourced comparison. Add hidden costs, weight what matters, then audit exactly why an option wins.</p>
-          <div class="hero-actions">
-            <a class="button button-dark" href="dashboard.html?demo=1">Open interactive demo <span>↗</span></a>
-            <a class="text-link" href="#install">Install in 60 seconds <span>↓</span></a>
-          </div>
-          <div class="trust-row" aria-label="TabVerdict promises">
-            <span>✓ No account</span><span>✓ No backend</span><span>✓ No affiliate links</span>
-          </div>
-        </div>
-
-        <div class="hero-demo" aria-label="Illustration of a product comparison">
-          <div class="demo-top">
-            <span class="demo-label">LIVE VERDICT</span>
-            <span class="demo-local"><i></i> On this device</span>
-          </div>
-          <div class="winner-card">
-            <div class="winner-stamp">1</div>
-            <div><small>CURRENT LEADER</small><strong>Nomad Air X</strong><span>63 / 100 · 100% coverage</span></div>
-            <div class="mini-ring"><b>63</b></div>
-          </div>
-          <div class="comparison-lines">
-            <div class="criterion"><span>Total cost <small>25%</small></span><div><i style="--value:62%"></i></div><b>€729</b></div>
-            <div class="criterion"><span>Range <small>45%</small></span><div><i style="--value:47%"></i></div><b>62 km</b></div>
-            <div class="criterion"><span>Weight <small>15%</small></span><div><i style="--value:80%"></i></div><b>23.8 kg</b></div>
-            <div class="criterion"><span>Warranty <small>15%</small></span><div><i style="--value:100%"></i></div><b>24 mo</b></div>
-          </div>
-          <div class="source-slip"><span>4 criteria · 12 sourced values</span><strong>Every number has a trail ↗</strong></div>
-          <span class="float-tag tag-one">NO SPONSORS</span>
-          <span class="float-tag tag-two">YOUR WEIGHTS</span>
-        </div>
-      </section>
-
-      <section class="marquee" aria-label="Core capabilities">
-        <div>CAPTURE TABS <span>✦</span> ADD REAL COSTS <span>✦</span> WEIGH TRADE-OFFS <span>✦</span> EXPORT TO AI <span>✦</span> KEEP THE SOURCES <span>✦</span> CAPTURE TABS <span>✦</span> ADD REAL COSTS <span>✦</span> WEIGH TRADE-OFFS <span>✦</span> EXPORT TO AI <span>✦</span> KEEP THE SOURCES <span>✦</span></div>
-      </section>
-
-      <section id="why" class="problem">
-        <div class="section-label"><span>01</span> THE PROBLEM</div>
-        <div class="problem-copy">
-          <h2>Twenty-seven tabs.<br>Three currencies.<br><em>Zero confidence.</em></h2>
-          <p>Store filters optimise for what they sell. Comparison sites optimise for affiliate clicks. Spreadsheets make you copy everything by hand. TabVerdict keeps the useful parts and removes the incentives you cannot trust.</p>
-        </div>
-        <div class="anti-features">
-          <article><span>NO</span><strong>Black-box “AI scores”</strong><p>A score without a formula is just an opinion in a progress bar.</p></article>
-          <article><span>NO</span><strong>Fake “best overall” picks</strong><p>The best choice changes when your priorities change. So should the winner.</p></article>
-          <article><span>NO</span><strong>Silent data collection</strong><p>There is no account, analytics SDK, remote database or shopping profile.</p></article>
-        </div>
-      </section>
-
-      <section id="how" class="how">
-        <div class="section-label light"><span>02</span> THREE CLICKS TO CLARITY</div>
-        <div class="how-grid">
-          <article>
-            <span class="step-no">01</span>
-            <div class="step-icon tabs-icon" aria-hidden="true"><i></i><i></i><i></i></div>
-            <h3>Capture</h3>
-            <p>Press the extension on any product page. TabVerdict reads structured product data and remembers where each value came from.</p>
-          </article>
-          <article>
-            <span class="step-no">02</span>
-            <div class="step-icon sliders-icon" aria-hidden="true"><i></i><i></i><i></i></div>
-            <h3>Weigh</h3>
-            <p>Add shipping, tax and fees. Create criteria like range, repairability or warranty, then set their importance.</p>
-          </article>
-          <article>
-            <span class="step-no">03</span>
-            <div class="step-icon verdict-icon" aria-hidden="true">✓</div>
-            <h3>Decide</h3>
-            <p>Watch the verdict respond. Open the evidence, expose missing data, or export the full comparison to Markdown, CSV, JSON or AI.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="privacy" class="privacy">
-        <div class="privacy-copy">
-          <div class="section-label"><span>03</span> PRIVACY YOU CAN INSPECT</div>
-          <h2>Your shortlist is<br><em>not a business model.</em></h2>
-          <p>TabVerdict requests temporary access only after you click it. The captured board lives in browser storage. There is nowhere for it to upload your data because this repository contains no server.</p>
-          <a class="text-link" href="privacy.html">Read the plain-English privacy policy <span>→</span></a>
-        </div>
-        <div class="permission-receipt" aria-label="Browser permissions explained">
-          <div class="receipt-head"><strong>PERMISSION RECEIPT</strong><span>4 items</span></div>
-          <div class="receipt-row"><span>activeTab</span><b>Read only the page you click</b></div>
-          <div class="receipt-row"><span>storage</span><b>Keep your board locally</b></div>
-          <div class="receipt-row"><span>scripting</span><b>Extract the chosen product</b></div>
-          <div class="receipt-row"><span>contextMenus</span><b>Offer a right-click shortcut</b></div>
-          <div class="receipt-total"><span>Remote trackers</span><strong>0</strong></div>
-          <div class="receipt-total"><span>Required accounts</span><strong>0</strong></div>
-          <small>THANK YOU FOR READING THE PERMISSIONS.</small>
-        </div>
-      </section>
-
-      <section id="install" class="install">
-        <div>
-          <p class="eyebrow"><span>READY</span> CHROME · EDGE · BRAVE · ARC</p>
-          <h2>A minute to install.<br><em>Hours of tab chaos saved.</em></h2>
-        </div>
-        <ol>
-          <li><span>1</span><p>Download or clone the repository.</p></li>
-          <li><span>2</span><p>Open <code>chrome://extensions</code> and enable Developer mode.</p></li>
-          <li><span>3</span><p>Choose “Load unpacked” and select the TabVerdict folder.</p></li>
-        </ol>
-        <div class="install-actions">
-          <a class="button button-acid" href="https://github.com/mmoya113/tabverdict">View source on GitHub <span>↗</span></a>
-          <a class="text-link light-link" href="dashboard.html?demo=1">Try before installing <span>→</span></a>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="brand footer-brand"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>TabVerdict</span></div>
-      <p>Built for people who want to know <em>why</em>.</p>
-      <div><a href="README.md">Docs</a><a href="privacy.html">Privacy</a><a href="https://github.com/mmoya113/tabverdict">GitHub</a></div>
-    </footer>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101010">
+<title>SHOW/RIFT</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0d0d0d;color:#f4f1e8;font:15px/1.45 Inter,ui-sans-serif,system-ui,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:70px 1fr;background:radial-gradient(circle at 70% 5%,#385016 0,transparent 28%),#0d0d0d}.rail{background:#080808;border-right:1px solid #2d2d2d;padding:14px 10px;display:flex;flex-direction:column;gap:10px;align-items:center}.logo{width:44px;height:44px;display:grid;place-items:center;background:#d6ff3f;color:#111;font-weight:900}.icon{width:44px;height:44px;border:1px solid #333;background:#151515;color:#f4f1e8}.icon.active,.icon:hover{border-color:#d6ff3f;color:#d6ff3f}.shell{padding:20px;min-width:0}.top{display:flex;justify-content:space-between;gap:18px;align-items:center;border-bottom:1px solid #2b2b2b;padding-bottom:16px}.eyebrow{margin:0;color:#aaa;font-size:12px;text-transform:uppercase;letter-spacing:.14em}.name{width:min(640px,70vw);border:0;background:transparent;color:inherit;font-size:30px;font-weight:850;padding:2px 0}.stats{display:flex;gap:8px;flex-wrap:wrap}.stats span,.pill{border:1px solid #363636;background:#151515;padding:7px 10px;color:#d7d7d7}.grid{display:grid;grid-template-columns:120px minmax(0,1fr) 320px;gap:18px;margin-top:18px;align-items:start}.strip,.stage,.panel{border:1px solid #303030;background:#111}.strip{display:grid;gap:10px;padding:10px;max-height:calc(100vh - 118px);overflow:auto}.thumb{position:relative;aspect-ratio:16/11;padding:0;border:1px solid #333;background:#181818;overflow:hidden}.thumb.active{border-color:#d6ff3f}.thumb img{width:100%;height:100%;object-fit:cover;display:block}.thumb span{position:absolute;left:7px;bottom:7px;background:#080808dd;color:white;padding:3px 5px;font-size:12px}.add,.primary,.export button{min-height:42px;border:1px solid #3a3a3a;background:#181818;color:#f4f1e8;display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:0 12px}.add:hover,.primary:hover,.export button:hover{border-color:#d6ff3f}.stage{padding:16px}.stageHead{display:flex;justify-content:space-between;gap:14px;align-items:center}.stage h2{margin:8px 0 6px;font-size:24px}.stage p{margin:0;color:#bababa}.shot{margin-top:18px;position:relative;width:100%;aspect-ratio:16/9;background:#050505;border:1px solid #383838;overflow:hidden;box-shadow:0 28px 80px #0008}.shot img{width:100%;height:100%;object-fit:contain;display:block}.pin{position:absolute;transform:translate(-50%,-50%);width:34px;height:34px;border:0;border-radius:50%;background:var(--accent,#d6ff3f);color:#111;font-weight:900;box-shadow:0 0 0 7px color-mix(in srgb,var(--accent,#d6ff3f) 22%,transparent)}.pin.active{outline:2px solid #fff}.note{margin-top:12px;border:1px solid #333;background:#151515;padding:12px}.note b{display:block;margin-bottom:4px}.panel{padding:14px;display:grid;gap:14px;position:sticky;top:18px}.panel section{display:grid;gap:8px;padding-bottom:14px;border-bottom:1px solid #2d2d2d}.panel label{font-size:12px;text-transform:uppercase;letter-spacing:.11em;color:#aaa}.panel input,.panel textarea,.panel select{width:100%;border:1px solid #3a3a3a;background:#0c0c0c;color:#f4f1e8;padding:10px}.panel textarea{min-height:88px;resize:vertical}.export{grid-template-columns:1fr 1fr 1fr}.player .panel{display:none}.player .grid{grid-template-columns:120px minmax(0,1fr)}.player .shot{cursor:pointer}@media(max-width:1050px){.grid{grid-template-columns:90px minmax(0,1fr)}.panel{grid-column:1/-1;position:static}}@media(max-width:720px){.app{grid-template-columns:1fr}.rail{flex-direction:row;justify-content:center;border-right:0;border-bottom:1px solid #2d2d2d}.shell{padding:12px}.top,.grid,.stageHead{display:grid}.grid{grid-template-columns:1fr}.strip{grid-auto-flow:column;grid-auto-columns:96px;overflow-x:auto;max-height:none}.name{width:100%;font-size:23px}}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+<nav class="rail"><div class="logo">SR</div><button class="icon active" id="editBtn" title="Studio">✎</button><button class="icon" id="playBtn" title="Player">▶</button><button class="icon" id="importBtn" title="Import">＋</button><button class="icon" id="saveBtn" title="Save">✓</button><input id="file" hidden multiple type="file" accept="image/*"></nav>
+<main class="shell"><header class="top"><div><p class="eyebrow">SHOW/RIFT</p><input class="name" id="projectName"></div><div class="stats"><span id="sceneCount"></span><span id="hotspotCount"></span><span>3 exports</span></div></header><div class="grid"><aside class="strip" id="strip"></aside><section class="stage"><div class="stageHead"><div><span class="pill">editable story surface</span><h2 id="sceneTitle"></h2><p id="sceneCaption"></p></div><button class="primary" id="addHotspot">＋ Hotspot</button></div><div class="shot" id="shot"></div><article class="note" id="note"></article></section><aside class="panel"><section><label>Scene title</label><input id="titleInput"><label>Caption</label><textarea id="captionInput"></textarea></section><section><label>Hotspot title</label><input id="hotTitle"><label>Hotspot body</label><textarea id="hotBody"></textarea><label>Click action</label><select id="hotAction"><option value="next">Next scene</option><option value="previous">Previous scene</option><option value="none">No navigation</option></select><button class="primary" id="deleteHot">Delete hotspot</button></section><section><label>Accent</label><input type="color" id="accent"><div class="export"><button id="htmlOut">HTML</button><button id="readmeOut">README</button><button id="jsonOut">JSON</button></div></section></aside></div></main>
+</div>
+<script>
+const demoSvg=(text,bg='#101010',fg='#d6ff3f')=>'data:image/svg+xml;utf8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900"><rect width="1600" height="900" fill="${bg}"/><rect x="90" y="90" width="1420" height="720" fill="#151515" stroke="#383838"/><rect x="170" y="170" width="600" height="92" fill="${fg}"/><rect x="170" y="330" width="390" height="250" fill="#f4efe8"/><rect x="620" y="330" width="650" height="250" fill="#222"/><text x="170" y="710" fill="#f4efe8" font-size="58" font-family="Arial" font-weight="900">${text}</text></svg>`);
+const uid=()=>crypto.randomUUID?crypto.randomUUID():Math.random().toString(36).slice(2);const store='showrift.v1';let mode='edit',sceneIndex=0,hotId=null;
+let project=JSON.parse(localStorage.getItem(store)||'null')||{name:'Launch story - SHOW/RIFT',accent:'#d6ff3f',scenes:[{id:uid(),title:'Turn screenshots into a story',caption:'Click the image to place callouts. Move pins by dragging them.',image:demoSvg('SCREENSHOTS WITH CONTEXT'),hotspots:[{id:uid(),x:24,y:42,title:'Scene strip',body:'Shape the walkthrough before sharing it.',action:'next'}]},{id:uid(),title:'Export something people can open',caption:'Standalone HTML, README copy and JSON backup are built in.',image:demoSvg('EXPORT THE WHOLE DEMO','#121212','#f4efe8'),hotspots:[{id:uid(),x:65,y:48,title:'Offline player',body:'Send the HTML file and it still works.',action:'next'}]},{id:uid(),title:'Use it for GitHub, clients or your own apps',caption:'A project demo becomes easier to understand in thirty seconds.',image:demoSvg('MAKE PEOPLE CLICK','#0f1510','#d6ff3f'),hotspots:[{id:uid(),x:70,y:38,title:'README ready',body:'Copy a compact launch section for the repo.',action:'previous'}]}]};
+const $=id=>document.getElementById(id);const save=()=>localStorage.setItem(store,JSON.stringify(project));const scene=()=>project.scenes[sceneIndex];const hot=()=>scene().hotspots.find(h=>h.id===hotId)||scene().hotspots[0]||null;function esc(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function render(){save();$('app').className='app '+(mode==='present'?'player':'');$('editBtn').classList.toggle('active',mode==='edit');$('playBtn').classList.toggle('active',mode==='present');$('projectName').value=project.name;$('sceneCount').textContent=project.scenes.length+' scenes';$('hotspotCount').textContent=project.scenes.reduce((a,s)=>a+s.hotspots.length,0)+' hotspots';$('strip').innerHTML=project.scenes.map((s,i)=>`<button class="thumb ${i===sceneIndex?'active':''}" data-scene="${i}"><img src="${s.image}" alt=""><span>${String(i+1).padStart(2,'0')}</span></button>`).join('')+'<button class="add" id="newScene">＋ Scene</button>';$('sceneTitle').textContent=scene().title;$('sceneCaption').textContent=scene().caption;$('titleInput').value=scene().title;$('captionInput').value=scene().caption;$('accent').value=project.accent;const h=hot();$('hotTitle').value=h?.title||'';$('hotBody').value=h?.body||'';$('hotAction').value=h?.action||'next';$('note').innerHTML=h?`<b>${esc(h.title)}</b><span>${esc(h.body)}</span>`:'No hotspot selected';$('shot').innerHTML=`<img src="${scene().image}" alt="${esc(scene().title)}">`+scene().hotspots.map((p,i)=>`<button class="pin ${p.id===h?.id?'active':''}" style="left:${p.x}%;top:${p.y}%;--accent:${project.accent}" data-hot="${p.id}" title="${esc(p.title)}">${i+1}</button>`).join('');bindDynamic()}
+function bindDynamic(){document.querySelectorAll('[data-scene]').forEach(b=>b.onclick=()=>{sceneIndex=+b.dataset.scene;hotId=scene().hotspots[0]?.id||null;render()});$('newScene').onclick=()=>{project.scenes.push({id:uid(),title:'Untitled scene',caption:'Explain the one thing that matters here.',image:demoSvg('NEW SCENE'),hotspots:[]});sceneIndex=project.scenes.length-1;hotId=null;render()};document.querySelectorAll('[data-hot]').forEach(b=>{b.onclick=e=>{e.stopPropagation();hotId=b.dataset.hot;if(mode==='present'){const h=hot();if(h?.action==='next')sceneIndex=Math.min(project.scenes.length-1,sceneIndex+1);if(h?.action==='previous')sceneIndex=Math.max(0,sceneIndex-1)}render()};b.onpointerdown=e=>{if(mode==='present')return;hotId=b.dataset.hot;b.setPointerCapture(e.pointerId);const move=m=>{const r=$('shot').getBoundingClientRect(),h=hot();if(!h)return;h.x=Math.max(0,Math.min(100,(m.clientX-r.left)/r.width*100));h.y=Math.max(0,Math.min(100,(m.clientY-r.top)/r.height*100));render()};const up=()=>{window.removeEventListener('pointermove',move);window.removeEventListener('pointerup',up)};window.addEventListener('pointermove',move);window.addEventListener('pointerup',up)}})}
+function addHotspot(x=50,y=50){const h={id:uid(),x,y,title:'New callout',body:'Write what people should understand here.',action:'next'};scene().hotspots.push(h);hotId=h.id;render()}$('shot').onclick=e=>{if(mode==='present')return;const r=$('shot').getBoundingClientRect();addHotspot((e.clientX-r.left)/r.width*100,(e.clientY-r.top)/r.height*100)};$('addHotspot').onclick=()=>addHotspot();$('projectName').oninput=e=>{project.name=e.target.value;render()};$('titleInput').oninput=e=>{scene().title=e.target.value;render()};$('captionInput').oninput=e=>{scene().caption=e.target.value;render()};$('hotTitle').oninput=e=>{const h=hot();if(h){h.title=e.target.value;render()}};$('hotBody').oninput=e=>{const h=hot();if(h){h.body=e.target.value;render()}};$('hotAction').onchange=e=>{const h=hot();if(h){h.action=e.target.value;render()}};$('accent').oninput=e=>{project.accent=e.target.value;render()};$('deleteHot').onclick=()=>{if(!hot())return;scene().hotspots=scene().hotspots.filter(h=>h.id!==hot().id);hotId=scene().hotspots[0]?.id||null;render()};$('editBtn').onclick=()=>{mode='edit';render()};$('playBtn').onclick=()=>{mode='present';render()};$('saveBtn').onclick=()=>{save();$('saveBtn').textContent='saved';setTimeout(()=>$('saveBtn').textContent='✓',900)};$('importBtn').onclick=()=>$('file').click();$('file').onchange=async e=>{for(const f of e.target.files){if(!f.type.startsWith('image/'))continue;const image=await new Promise(res=>{const r=new FileReader();r.onload=()=>res(r.result);r.readAsDataURL(f)});project.scenes.push({id:uid(),title:f.name.replace(/\.[^.]+$/,''),caption:'Imported screenshot.',image,hotspots:[]})}sceneIndex=project.scenes.length-1;render()};
+function exportHtml(){return '<!doctype html>'+document.documentElement.outerHTML.replace(/<script>[\s\S]*<\/script>/,'<script>localStorage.removeItem("'+store+'");project='+JSON.stringify(project).replace(/</g,'\\u003c')+';render();<\/script>')}function exportReadme(){return `# ${project.name}\n\nInteractive walkthrough made with SHOW/RIFT.\n\n${project.scenes.map((s,i)=>`${i+1}. ${s.title} - ${s.caption}`).join('\n')}\n`}function dl(name,text,type){const a=document.createElement('a'),u=URL.createObjectURL(new Blob([text],{type}));a.href=u;a.download=name;a.click();URL.revokeObjectURL(u)}$('htmlOut').onclick=()=>dl('showrift.html',exportHtml(),'text/html');$('readmeOut').onclick=()=>dl('README.md',exportReadme(),'text/markdown');$('jsonOut').onclick=()=>dl('showrift.json',JSON.stringify(project,null,2),'application/json');render();
+</script>
+</body>
 </html>
