@@ -36,7 +36,7 @@ SpecForge is intentionally narrow:
 | README export | Download a starter markdown reference |
 | Local-first | No login, analytics or backend required |
 
-## Quick start
+## Quick Start
 
 \`\`\`bash
 git clone https://github.com/mmoya113/tabverdict.git
