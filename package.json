@@ -1,24 +1,12 @@
 {
-  "name": "tabverdict",
-  "version": "0.1.0",
-  "description": "A privacy-first browser extension for evidence-backed product comparisons.",
+  "name": "showrift",
+  "version": "1.0.0",
+  "private": false,
   "type": "module",
-  "private": true,
+  "description": "Local-first product story studio for screenshots, hotspots and launch-ready exports.",
   "scripts": {
-    "test": "node --test",
-    "validate": "node scripts/validate.mjs",
-    "check": "npm run validate && npm test",
-    "package": "node scripts/package.mjs"
+    "check": "node scripts/check.mjs"
   },
-  "engines": {
-    "node": ">=20"
-  },
-  "keywords": [
-    "browser-extension",
-    "comparison",
-    "local-first",
-    "privacy",
-    "shopping"
-  ],
+  "keywords": ["screenshots", "storybook", "demo", "readme", "local-first"],
   "license": "MIT"
 }
