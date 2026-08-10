@@ -1,0 +1,65 @@
+name: VANTA V2 Browser QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'app.js'
+      - 'style.css'
+      - 'manifest.webmanifest'
+      - 'sw.js'
+      - '.github/workflows/qa-vanta-v2.yml'
+permissions:
+  contents: read
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install playwright@1.54.2 >/dev/null 2>&1
+          npx playwright install --with-deps chromium >/dev/null 2>&1
+      - name: Run VANTA regression
+        shell: bash
+        run: |
+          python3 -m http.server 8080 >/tmp/vanta-http.log 2>&1 &
+          cat > qa.mjs <<'JS'
+          import { chromium } from 'playwright';
+          const browser=await chromium.launch({headless:true});
+          async function run(viewport,mobile){
+            const page=await browser.newPage({viewport,isMobile:mobile,hasTouch:mobile});
+            const errors=[];page.on('pageerror',e=>errors.push(e.message));
+            await page.goto('http://127.0.0.1:8080/?qa=1',{waitUntil:'domcontentloaded'});
+            await page.locator('#paperMode').tap();
+            await page.locator('#startMaster').tap();
+            if(!await page.locator('#stopMaster').isEnabled()) throw new Error('master did not start');
+            await page.locator('#stopMaster').tap();
+            await page.locator('#resetMaster').tap();
+            const nav=async name=>{
+              const loc=mobile?page.locator(`.mobile-nav [data-view="${name}"]`):page.locator(`.desktop-nav [data-view="${name}"]`);
+              if(await loc.count()){await loc.tap();await page.waitForSelector(`#view-${name}.active`)}
+            };
+            await nav('sniper');await page.locator('#armSniper').tap();await page.locator('#armSniper').tap();
+            await nav('radar');await nav('arena');await page.locator('#startArena').tap();await page.locator('#startArena').tap();
+            await nav('wallet');
+            if(mobile){await page.locator('#moreBtn').tap();await page.waitForSelector('#moreSheet:not(.hidden)');await page.locator('#moreSheet [data-view="settings"]').tap();}
+            else await nav('settings');
+            await page.locator('[data-theme="ocean"]').tap();
+            await page.locator('#positionPct').fill('15');
+            await page.locator('#startingBalance').fill('1000');
+            await page.locator('#savePaper').tap();
+            const eq=await page.locator('#masterEquity').textContent();if(!eq.includes('1,000'))throw new Error('capital reset failed: '+eq);
+            if(errors.length)throw new Error(errors.join(' | '));
+            await page.close();
+          }
+          await run({width:1440,height:1000},false);
+          await run({width:393,height:852},true);
+          console.log('PASS desktop + iPhone touch navigation + engine controls + settings + themes');
+          await browser.close();
+          JS
+          node qa.mjs
