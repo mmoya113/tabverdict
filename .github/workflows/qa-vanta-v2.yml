@@ -32,7 +32,7 @@ jobs:
           import { chromium } from 'playwright';
           const browser=await chromium.launch({headless:true});
           async function run(viewport,mobile){
-            const page=await browser.newPage({viewport,isMobile:mobile,hasTouch:mobile});
+            const page=await browser.newPage({viewport,isMobile:mobile,hasTouch:true});
             const errors=[];page.on('pageerror',e=>errors.push(e.message));
             await page.goto('http://127.0.0.1:8080/?qa=1',{waitUntil:'domcontentloaded'});
             await page.locator('#paperMode').tap();
@@ -59,7 +59,7 @@ jobs:
           }
           await run({width:1440,height:1000},false);
           await run({width:393,height:852},true);
-          console.log('PASS desktop + iPhone touch navigation + engine controls + settings + themes');
+          console.log('PASS desktop + iPhone first-touch navigation + engine controls + settings + themes');
           await browser.close();
           JS
           node qa.mjs
