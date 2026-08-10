@@ -1,0 +1,11 @@
+{
+  "name":"VANTA Trading OS",
+  "short_name":"VANTA",
+  "start_url":"./?pwa=1",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#05060a",
+  "theme_color":"#05060a",
+  "description":"Premium paper-first Solana memecoin trading research cockpit.",
+  "icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
